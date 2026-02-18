@@ -1,5 +1,7 @@
 - name: create ec2 ans r53 records
-  hosts: all
+  hosts: localhost
+  vars:
+    domain_name: "devsecosaws26.online"
   connection: local
   vars:
     sg_id: sg-0075554bad5e3c743
