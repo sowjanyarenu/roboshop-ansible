@@ -5,7 +5,6 @@
     sg_id: sg-0075554bad5e3c743
     ami_id: ami-0220d79f3f480ecf5
     env: dev
-    domain_name: devsecosaws26.online
     instances:
     - mongodb
     - catalogue
