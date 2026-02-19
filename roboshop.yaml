@@ -4,6 +4,7 @@
   vars:
     sg_id: sg-0075554bad5e3c743
     ami_id: ami-0220d79f3f480ecf5
+    domain_name: devsecosaws26.online
     env: dev
     instances:
     - mongodb
