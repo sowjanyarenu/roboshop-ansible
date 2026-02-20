@@ -31,11 +31,11 @@
   - name: create r53 records
     amazon.aws.route53:
       state: present
-      zone: "{{ domain_name }}"
-      record: "{{ item.item }}-{{ env }}.{{ domain_name }}" #mongodb-dev.devsecosaws26.online, frontend-dev.devsecosaws26.online
+      zone: devsecosaws26.online
+      record: "{{ item.item }}-{{ env }}.{{ devsecosaws26.online }}" #mongodb-dev.devsecosaws26.online, frontend-dev.devsecosaws26.online
       type: A
       ttl: 1
-      value: _"{{ item.instances[0].private_ip_address}}"
+      value: _"{{ item.instances[0].private_ip_address}}"'
       wait: true
     loop: "{{ ec2_output.results }}"
 
