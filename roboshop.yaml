@@ -31,7 +31,7 @@
   - name: create r53 records
     amazon.aws.route53:
       state: present
-      zone: "devsecosaws26.online"
+      zone: "{{ devsecosaws26.online }}"
       record: "{{ item.item }}-{{ env }}.{{ devsecosaws26.online }}" #mongodb-dev.devsecosaws26.online, frontend-dev.devsecosaws26.online
       type: A
       ttl: 1
