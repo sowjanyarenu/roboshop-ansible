@@ -32,7 +32,7 @@
     amazon.aws.route53:
       state: present
       zone: "devsecosaws26.online"
-      record: "{{ item.item }}-{{ env }}.{{ devsecosaws26.online }}" #mongodb-dev.devsecosaws26.online, frontend-dev.devsecosaws26.online
+      record: "{{ item.item }}-{{ env }}.devsecosaws26.online" #mongodb-dev.devsecosaws26.online, frontend-dev.devsecosaws26.online
       type: A
       ttl: 1
       value: _"{{ item.instances[0].private_ip_address}}"'
