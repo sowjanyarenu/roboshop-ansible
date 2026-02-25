@@ -31,4 +31,5 @@
   - name: unarchive catalogue
     ansible.builtin.unarchive:
       src: /tmp/catalogue.zip
-      dest: /app
+      dest: /opt/catalogue
+      remote_src: yes
