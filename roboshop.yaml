@@ -7,6 +7,7 @@
     ami_id: ami-0220d79f3f480ecf5
     domain_name: devsecosaws26.online
     env: dev
+    action: create
     instances:
     - mongodb
     - catalogue
@@ -41,7 +42,7 @@
       ttl: 1
       value: "{{ item.instances[0].private_ip_address}}" 
       wait: true
-    loop: "{{ ec2_output.results }}"
+    loop: "{{ ec2_output.results }}" #list
     when: action == "create"
 
   - name: create r53 records
