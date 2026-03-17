@@ -58,6 +58,7 @@
     when: # and 
     - item.item == "frontend"
     - action == "create"
+    overwrite: true
 
   ### DESTROY ###
   - name: delete r53 records
