@@ -47,18 +47,18 @@
 
   - name: create r53 records
     amazon.aws.route53:
+      overwrite: true
       state: present
       zone: "{{ domain_name }}"
       record: "roboshop-{{ env }}.{{ domain_name }}" #roboshop.devsecosaws26.online, 
       type: A
       ttl: 1
       value: "{{ item.instances[0].public_ip_address}}" 
-      wait: true
     loop: "{{ ec2_output.results }}"
     when: # and 
     - item.item == "frontend"
     - action == "create"
-    overwrite: true
+    
 
   ### DESTROY ###
   - name: delete r53 records
