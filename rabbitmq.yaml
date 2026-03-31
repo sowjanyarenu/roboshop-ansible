@@ -19,13 +19,9 @@
       name: rabbitmq-server
 
   - name: create rabbitmq user
-    communty.rabbitmq.rabbitmq_user:
+    community.rabbitmq.rabbitmq_user:
       user: roboshop
-      password: roboshop123
-      permissions:
-        - vhost: /
-          configure_priv: .*
-          read_priv: .*
-          write_priv: .*
+      password: roboshop
+      tags: administrator
       state: present
 
