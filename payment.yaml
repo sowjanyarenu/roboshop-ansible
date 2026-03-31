@@ -45,7 +45,7 @@
       dest: /app
       remote_src: yes
 
-  - name: install dependecie
+  - name: install dependecies
     ansible.builtin.pip:
       requirments: requirments.txt
       executable: pip3.9

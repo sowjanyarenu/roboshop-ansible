@@ -63,7 +63,7 @@
     ansible.builtin.systemd_service:
       daemon_reload: yes 
 
-  - name: install denpendencie
+  - name: install denpendencies
     ansible.builtin.pip:
       name: pyMySQL
       executable: pip3.9
