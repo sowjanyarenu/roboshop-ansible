@@ -5,14 +5,14 @@
   - name: enable nginx 1.24
     ansible.builtin.command: dnf module enable nginx1.24
 
-  - name: install nginx;
+  - name: install nginx
     ansible.builtin.dnf:
       name: nginx
       state: present
 
   - name: Remove the entire directory
     ansible.builtin.file:
-    path: /user/share/nginx/html
+    path: /usr/share/nginx/html
     state: absent
 
   - name: create html directory
