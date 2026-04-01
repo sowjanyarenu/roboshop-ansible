@@ -1,6 +1,6 @@
 - name: configure frontend server
   hosts: frontend
-  becomes: yes
+  become: yes
   tasks:
   - name: enable nginx 1.24
     ansible.builtin.command: dnf module enable nginx1.24
