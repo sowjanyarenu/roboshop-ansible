@@ -4,7 +4,7 @@
   tasks: 
   - name: istall maven and mysql
     ansible.builtin.dnf:
-      name: maven
+      name: "{{ item }}"
       state: present
     loop:
     - maven
