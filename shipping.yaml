@@ -75,7 +75,7 @@
   - name: import shipping data
     community.mysql.mysql_db:
       state: import
-      name: all
+      name: shipping
       login_host: "{{ MYSQL_HOST }}"
       login_user: root
       login_password: RoboShop@1
