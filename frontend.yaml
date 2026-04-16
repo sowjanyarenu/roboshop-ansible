@@ -14,12 +14,12 @@
 
   - name: Remove the entire directory
     ansible.builtin.file:
-      path: /user/share/nginx/html
+      path: /usr/share/nginx/html
       state: absent
 
   - name: create html directory
     ansible.builtin.file:
-      path: /user/share /nginx/html
+      path: /usr/share /nginx/html
       state: directory
 
   - name: download frontend
@@ -30,7 +30,7 @@
   - name: unarchive frontend
     ansible.builtin.unarchive:
       src: /tmp/frontend.zip
-      dest: /user/share /nginx/html
+      dest: /usr/share /nginx/html
       remote_src: yes 
 
   - name: remove default nginx
