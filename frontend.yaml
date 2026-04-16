@@ -42,9 +42,6 @@
     copy:
       src: nginx.conf
       dest: /etc/nginx/nginx.conf
-
-  - debug:
-    var: nginx_conf_src
   
   - name: restart nginx
     ansible.builtin.service:
