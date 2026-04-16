@@ -40,7 +40,7 @@
 
   - name: copy nginx.conf
     ansible.builtin.template:
-      src: nginx.conf
+      src: "{{ nginx_conf_src }}"
       path: /etc/nginx/nginx.conf
   
   - name: restart nginx
