@@ -42,9 +42,12 @@
     copy:
       src: nginx.conf
       dest: /etc/nginx/nginx.conf
+
+  - name: validate nginx config
+    command: nginx -t
   
   - name: restart nginx
     ansible.builtin.service:
-      name: nginx.service
+      name: nginx
       state: restarted
       enabled: yes
